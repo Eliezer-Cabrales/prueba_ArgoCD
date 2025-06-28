@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-demo
+  name: nginx-demo-automatico
   labels:
     app: nginx-demo
 spec:
@@ -31,7 +31,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-demo
+  name: nginx-demo-automatico
 spec:
   type: ClusterIP
   selector:
