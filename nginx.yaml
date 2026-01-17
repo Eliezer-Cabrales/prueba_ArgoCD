@@ -2,18 +2,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-demo-automatico
+  name: nginx-demo-manual
   labels:
-    app: nginx-demo
+    app: nginx-demo-manual
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: nginx-demo
+      app: nginx-demo-manual
   template:
     metadata:
       labels:
-        app: nginx-demo
+        app: nginx-demo-manual
     spec:
       containers:
         - name: nginx
@@ -35,7 +35,7 @@ metadata:
 spec:
   type: ClusterIP
   selector:
-    app: nginx-demo
+    app: nginx-demo-manual
   ports:
     - port: 80
       targetPort: 80
